@@ -3,54 +3,53 @@ Desafio Hyperativa
 
 ## Sobre o desafio
 
-O cliente da empresa V está pedindo auxílio para averiguar o andamento 
+Analisando o cenário apresentado realize as atividades solicitadas.
 
-Avaliar e realizar um dashboard Realizar uma Tratamento e organização das informações de um sorteio.
+> A empresa V lançou uma campanha promocional em seu aplicativo para premiar com brindes seus clientes que efetuassem compras em determinados estabelecimentos. A mecânica consiste em realizar o cadastro prévio no aplicativo e realizar uma compra acima de R$100,00 no estabelecimento participante. Após a mecânica concluída, o cliente realiza o resgate de um voucher pelo aplicativo e o apresenta para obter o brinde no próprio estabelecimento.
+>
+> Após o lançamento os usuários relataram problemas para realizar o resgate e obter o voucher promocional. Analisando alguns casos foi constatado que os clientes não estavam respeitando a mecânica promocional e não estavam realizando o cadastro prévio no aplicativo ou não realizando uma compra acima do valor estipulado. Em outros casos foi observado uma inconsistência no sistema devido a uma lentidão no processamento do resgate.
+>
+> Em vista das reclamações o cliente da empresa V solicitou uma avaliação das informações para averiguar se os problemas que estão ocorrendo são problemas sistêmicos ou de uso da ferramenta por parte dos usuários. Com isto obter uma visão gerencial da sua campanha e atuar em cima do problema. 
+>
+> Para isto a equipe responsável levantou as informações das tentativas de resgate realizadas na sessão do usuário no aplicativo e disponibilizou a base de dados ([base.csv](https://github.com/hyperativa/bi/master/base.csv)) para sua análise com os seguintes campos:
+> 
+> - _**Date**_: Data da solicitação do resgate
+> - _**Hour**_: Hora da solicitação do resgate
+> - _**CustomerID**_: Identificador do usuário do sistema
+> - _**AccessID**_: Identificador da sessão do usuário no aplicativo
+> - _**StartAccess**_: Timestamp inicial do processamento do resgate
+> - _**EndAccess**_: Timestamp final do processamento do resgate
+> - _**DurationTime**_: Duração do processamento do resgate
+> - _**MessageType**_: Código da mensagem de erro apresentada ao usuário
+> - _**BenefitKey**_: Código do voucher do benefício resgatado
+> - _**AccessAttempts**_: Quantidade de tentativas de resgate realizadas pelo usuário durante a sessão no aplicativo
+> 
+> Notas: 
+> - Quando um _**BenefitKey**_ é apresentado o resgate foi realizado com sucesso e o usuário obteve o benefício promocional;
+> - Quando um _**MessageType**_ é apresentado o usuário não obteve sucesso devido a um não cumprimento da mecânica promocional;
+> - Caso o resgate seja realizado com mais de 01 tentativa a experiência do usuário final é afetada;
+>
+> Com base nestas informações você foi encarregado de analisar e realizar as análises necessárias.
 
-
-Todas as informações estão disponíveis no arquivo de Base de Dados ([base.sql](https://raw.githubusercontent.com/hyperativa/bi/master/base.sql)) fornecida neste repositório.
 
 ### Exercício 01
 
-(...)
+Em sua avaliação inicial, defina os principais _KPI’s_ para serem apresentados ao cliente para acompanhar o andamento da campanha promocional.
 
 
 ### Exercício 02
 
-Tabelas:
+Com as informações fornecidas, crie um dashboard apresentando visões relevantes para a avaliação do cliente. Considere apresentar visões por período de tempo, recorrência do uso do benefício e problemáticas envolvidas. 
 
-- Clientes - Cadastros de clientes
-- Cartoes - Registros de cartão para um cliente (cadastro.Cliente)
-- Transações - Registros de compra para um cartão (cartao.Cartao)
-- NumerosDaSorte - Registros de números da sorte para cada cartão, gerados a partir das transações. (sorteio.NumerodaSorte)
+Se possível, considere apresentar os _KPI’s_ definidos anteriormente e estipular targets aceitáveis.
 
-Layout da tabela NumerosDaSorte:
-
-- Codigo int
-- CodigoTransacao int
-- NumeroSorte bigint
-- Criacao datetime
-
-Para cada registro na tabela Transacoes (para um determinado cartão), precisamos criar 8 registros na tabela NumerosDaSorte, dentro do intervalo 
-de data de 01/09/2012 até 25/11/2012. Caso existam registros fora desse intervalo, o cartão deverá ganhar o dobro de registros na tabela NumerosDaSorte. 
-São válidas apenas transações com Valor igual ou acima de 10 reais.
-
-**Exemplo:**
-Cartao1 possui 20 transações no intervalo de data e 3 fora do intervalo. O mesmo deverá ganhar 160 registros referentes aos registros dentro do intervalo + 6 referentes as transações que estão fora do período, na tabela de NumerosDaSorte. Lembrando que são válidas apenas transações com Valor igual ou maior que 10 reais.
-
-A coluna [NumeroSorte] da tabela NumerosDaSorte deve ser a soma do codigo do Cliente + codigo do Cartao + codigo da Transacao dividido por 3.
-
-Crie uma Procedure para armazernar o script que você criou acima.
+Utilize Power BI, Tableau ou Google Data Studio para apresentação dos dados ao cliente.
 
 
-### Exercício 3
+### Exercício 03
 
-(...)
+Em sua avaliação, qual é o diagnóstico apresentado? Quais foram as conclusões que você obteve? Sugira ao cliente opções para atuar no problema mapeado com o intuito de melhorar a performance da campanha.
 
-
-### Exercício 4
-
-Crie uma conclusão a respeito do sistema de resgate e apresente suas concluões e sugestões de próximos passos.
 
 # Boa Sorte
 
