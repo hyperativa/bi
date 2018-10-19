@@ -25,8 +25,8 @@ Analisando o cenário apresentado realize as atividades solicitadas.
 > - _**AccessAttempts**_: Quantidade de tentativas de resgate realizadas pelo usuário durante a sessão no aplicativo
 > 
 > Notas: 
-> - Quando um _**BenefitKey**_ é apresentado o resgate foi realizado com sucesso e o usuário obteve o benefício promocional;
-> - Quando um _**MessageType**_ é apresentado o usuário não obteve sucesso devido a um não cumprimento da mecânica promocional;
+> - Quando _**BenefitKey**_ é apresentado o resgate foi realizado com sucesso e o usuário obteve o benefício;
+> - Quando _**MessageType**_ é apresentado o usuário não obteve sucesso devido a um não cumprimento da mecânica;
 > - Caso o resgate seja realizado com mais de 01 tentativa a experiência do usuário final é afetada;
 >
 > Com base nestas informações você foi encarregado de analisar e realizar as análises necessárias.
