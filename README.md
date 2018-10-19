@@ -11,7 +11,7 @@ Analisando o cenário apresentado realize as atividades solicitadas.
 >
 > Em vista das reclamações o cliente da empresa V solicitou uma avaliação das informações para averiguar se os problemas que estão ocorrendo são problemas sistêmicos ou de uso da ferramenta por parte dos usuários. Com isto obter uma visão gerencial da sua campanha e atuar em cima do problema. 
 >
-> Para isto a equipe responsável levantou as informações das tentativas de resgate realizadas na sessão do usuário no aplicativo e disponibilizou a base de dados ([base.csv](https://github.com/hyperativa/bi/master/base.csv)) para sua análise com os seguintes campos:
+> Para isto a equipe responsável levantou as informações das tentativas de resgate realizadas na sessão do usuário no aplicativo e disponibilizou a base de dados ([base.csv](https://github.com/hyperativa/bi/blob/master/base.csv)) para sua análise com os seguintes campos:
 > 
 > - _**Date**_: Data da solicitação do resgate
 > - _**Hour**_: Hora da solicitação do resgate
